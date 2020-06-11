@@ -19,16 +19,13 @@ import com.daj.imagemachine.models.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineDataViewModel extends AndroidViewModel {
+public class MachineDataViewModel extends ViewModel {
 
     private MutableLiveData<List<Machine>> machineList;
     private MachineHelper machineHelper;
-    private Context context;
 
-    public MachineDataViewModel(@NonNull Application application) {
-        super(application);
-        context = application.getApplicationContext();
-        machineHelper = MachineHelper.getINSTANCE(context);
+    public MachineDataViewModel() {
+
     }
 
 
@@ -55,8 +52,6 @@ public class MachineDataViewModel extends AndroidViewModel {
                     machine.setLastMaintenanceDate(cursor.getString(cursor.getColumnIndex(DBContract.machineTableColums.COLUMN_MAC_LAST_MT_DATE)));
                     mMachineList.add(machine);
                 } while (cursor.moveToNext());
-            } else {
-                Toast.makeText(context, "No Machine Data yet saved on the Database", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

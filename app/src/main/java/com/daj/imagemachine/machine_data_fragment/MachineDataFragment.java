@@ -62,16 +62,7 @@ public class MachineDataFragment extends Fragment {
         cvMachineDataAdapter = new CardViewMachineDataAdapter(context);
         cvMachineDataAdapter.notifyDataSetChanged();
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        MachineDataViewModel model = new ViewModelProvider(this).get(MachineDataViewModel.class);
-        model.getMachines().observe(requireActivity(), new Observer<List<Machine>>() {
-            @Override
-            public void onChanged(List<Machine> machines) {
-                cvMachineDataAdapter.setMachineList(machines);
-                recyclerView.setAdapter(cvMachineDataAdapter);
-                showLoading(false);
-                machineList = machines;
-            }
-        });
+        // code to implement viewmodel goes here
 
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
