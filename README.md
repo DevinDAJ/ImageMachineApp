@@ -2,6 +2,7 @@
 a Java Android Machine Image Gallery App
 
 Function Description
+
     • The app is called "Image Machine”
     • The app will have 2 menu: "Machine Data" and "Code Reader”
     • When opening the app for the first time OR user click menu "Machine Data", the app will show a page with:
