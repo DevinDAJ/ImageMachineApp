@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_machine_data"
+        android:icon="@drawable/machine_24"
+        android:title="@string/title_machine_data" />
+
+    <item
+        android:id="@+id/nav_code_reader"
+        android:icon="@drawable/qr_code_24"
+        android:title="@string/title_code_reader" />
+</menu>
